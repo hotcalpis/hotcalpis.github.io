@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-size: max(15px, calc(80% + 4 * (100vw - 600px) / 600));
+}
