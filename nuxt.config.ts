@@ -4,6 +4,11 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxtjs/tailwindcss'
   ],
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+    }
+  },
   content: {
     highlight: {
       preload: [

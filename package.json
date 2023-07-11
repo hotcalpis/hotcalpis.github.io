@@ -2,11 +2,11 @@
   "name": "writing",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
     "lint": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lintfix": "prettier --write --list-different . && npm run lint -- --fix"
   },
@@ -28,7 +28,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.15.1",
-    "nuxt": "^3.6.1",
+    "nuxt": "^3.6.2",
     "prettier": "^2.8.8",
     "typescript": "*"
   }
