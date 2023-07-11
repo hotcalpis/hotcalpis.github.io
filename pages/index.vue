@@ -1,22 +1,24 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
-const keyword = ref('')
 const { data: posts } = await useAsyncData(
   'posts',
   () =>
     queryContent()
-      .where({
-        $or: [
-          { title: { $regex: `/${keyword.value}/ig` } },
-          { description: { $regex: `/${keyword.value}/ig` } },
-          // TODO: body
-        ],
-      })
       .sort({ date: -1 })
-      .only(['_path', 'title', 'date'])
+      .only(['_path', 'title', 'date', 'description'])
       .find(),
-  { default: () => [], watch: [keyword] }
+  { default: () => [] }
+)
+
+const keyword = ref('')
+const filteredPosts = computed(() =>
+  posts.value.filter(
+    (post) =>
+      // TODO: 本文検索
+      post.title.includes(keyword.value) ||
+      post.description.includes(keyword.value)
+  )
 )
 </script>
 
@@ -29,7 +31,11 @@ const { data: posts } = await useAsyncData(
     @input="search"
   />
 
-  <p v-for="post in posts" :key="post.title" class="mt-8 hover:text-primary">
+  <p
+    v-for="post in filteredPosts"
+    :key="post.title"
+    class="mt-8 hover:text-primary"
+  >
     <NuxtLink :to="post._path">
       <span class="align-middle text-2xl font-bold">{{ post.title }}</span>
       <span class="align-middle font-medium text-gray-400">
