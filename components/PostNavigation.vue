@@ -5,7 +5,7 @@ const route = useRoute()
 const path = route.path
 
 const { data: surrounds } = await useAsyncData(`${path}_surround`, () => {
-  return queryContent()
+  return queryContent('posts')
     .sort({ date: 1 })
     .only(['_path', 'title'])
     .findSurround(path)
@@ -17,7 +17,11 @@ const next = computed(() => surrounds.value?.[1])
 <template>
   <div v-if="prev || next" class="flex justify-between">
     <div class="w-2/5">
-      <NuxtLink v-if="prev" :to="prev._path" class="flex flex-col">
+      <NuxtLink
+        v-if="prev"
+        :to="prev._path"
+        class="flex flex-col ease-out duration-200 hover:text-primary"
+      >
         <div class="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,15 +36,19 @@ const next = computed(() => surrounds.value?.[1])
           >
             <path d="M15 4l-8 8 8 8" />
           </svg>
-          <span class="mx-1 text-xs text-gray-500">Previous</span>
+          <span class="mx-1 text-xs text-gray-500">Prev</span>
         </div>
-        <div class="mt-1 line-clamp-2 text-primary">
+        <div class="mt-1 line-clamp-2">
           {{ prev.title }}
         </div>
       </NuxtLink>
     </div>
     <div class="w-2/5">
-      <NuxtLink v-if="next" :to="next._path" class="flex flex-col">
+      <NuxtLink
+        v-if="next"
+        :to="next._path"
+        class="flex flex-col ease-out duration-200 hover:text-primary"
+      >
         <div class="flex justify-end items-center">
           <span class="mx-1 text-xs text-gray-500">Next</span>
           <svg
@@ -58,7 +66,7 @@ const next = computed(() => surrounds.value?.[1])
           </svg>
         </div>
         <div class="flex justify-end">
-          <span class="mt-1 line-clamp-2 text-primary">{{ next.title }}</span>
+          <span class="mt-1 line-clamp-2">{{ next.title }}</span>
         </div>
       </NuxtLink>
     </div>

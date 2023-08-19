@@ -19,6 +19,7 @@ module.exports = {
       },
     },
   ],
+  parser: 'vue3',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

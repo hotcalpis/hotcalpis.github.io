@@ -4,9 +4,19 @@ import { ref, computed } from 'vue'
 const { data: posts } = await useAsyncData(
   'posts',
   () =>
-    queryContent()
+    queryContent('posts')
       .sort({ date: -1 })
       .only(['_path', 'title', 'date', 'description'])
+      .find(),
+  { default: () => [] }
+)
+
+const { data: guidelines } = await useAsyncData(
+  'guidelines',
+  () =>
+    queryContent('guidelines')
+      .sort({ sortNo: 1 })
+      .only(['_path', 'title', 'description'])
       .find(),
   { default: () => [] }
 )
@@ -27,20 +37,11 @@ const filteredPosts = computed(() =>
     v-model="keyword"
     type="search"
     :placeholder="`Search from ${posts.length} posts...`"
-    class="p-2 w-full h-10 rounded outline-none border-2 border-gray focus:border-primary"
+    class="p-2 w-full h-10 rounded outline-none border-2 border-gray ease-out duration-100 focus:border-primary"
     @input="search"
   />
 
-  <p
-    v-for="post in filteredPosts"
-    :key="post.title"
-    class="mt-8 hover:text-primary"
-  >
-    <NuxtLink :to="post._path">
-      <span class="align-middle text-2xl font-bold">{{ post.title }}</span>
-      <span class="align-middle font-medium text-gray-400">
-        - {{ post.date }}</span
-      >
-    </NuxtLink>
-  </p>
+  <PostList :posts="filteredPosts" />
+  <hr class="my-8" />
+  <PostList v-if="!keyword" :posts="guidelines" small />
 </template>

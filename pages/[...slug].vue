@@ -14,5 +14,5 @@
     </ContentDoc>
   </div>
 
-  <PostNavigation class="mt-6" />
+  <PostNavigation class="mt-7" />
 </template>
