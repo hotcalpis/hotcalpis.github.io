@@ -7,6 +7,7 @@ export default {
   theme: {
     colors: {
       primary: '#4DBE65',
+      'outer-space': '#091337',
       transparent: 'transparent',
       current: 'currentColor',
       black: colors.black,
