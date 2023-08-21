@@ -5,7 +5,7 @@ interface Props {
     title: string
     date?: string
   }[]
-  small: boolean
+  small?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {

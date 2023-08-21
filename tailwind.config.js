@@ -12,6 +12,7 @@ export default {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
+      slate: colors.slate,
       gray: colors.gray,
       emerald: colors.emerald,
       indigo: colors.indigo,
