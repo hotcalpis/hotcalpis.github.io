@@ -9,7 +9,7 @@ const props = defineProps({
     <!-- TODO: dialogタグにしたい -->
     <div
       v-if="isShow"
-      class="fixed table z-50 top-0 left-0 w-full h-full bg-black/50"
+      class="fixed table z-50 top-0 left-0 w-screen h-[100lvh] bg-black/50"
     >
       <div class="table-cell align-middle" @click.self="$emit('close')">
         <div
