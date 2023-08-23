@@ -104,11 +104,10 @@ const onPointerMove = (e: PointerEvent) => {
 
 <template>
   <div
-    class="flex flex-col sm:flex-row flex-wrap justify-around"
+    class="flex flex-col justify-between items-center lg:max-h-[76vh]"
     @pointerdown="onPointerDown"
     @pointerup="onPointerUp"
   >
-    TODO: Canvasのサイズ調整とレスポンシブ
     <MeridianPassageCanvas
       :latitude="latitude"
       :degree-per="degreePerInAnime"
@@ -117,7 +116,7 @@ const onPointerMove = (e: PointerEvent) => {
       :pointer-drag-on="pointerDragOn"
       :pointer-drag-off="pointerDragOff"
       :on-pointer-move="onPointerMove"
-      class="mb-1 sm:mb-0"
+      class="mb-0.5"
     />
     <MeridianPassageOverLookingCanvas
       :latitude="latitude"
@@ -127,7 +126,7 @@ const onPointerMove = (e: PointerEvent) => {
     />
   </div>
   <Sources :title="'テクスチャ出典'" :sources="textureSources" />
-  <div class="mt-4">
+  <div class="mt-4 text-xs">
     <div class="my-1">
       <p class="my-0">
         緯度：

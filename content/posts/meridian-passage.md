@@ -10,4 +10,6 @@ description: Three.js を使って太陽と月の動きを地球上から3Dで�
 
 夏至の南中高度が 78 度、冬至の南中高度が 31 度でそれぞれ最大と最小になることもバッチリ理解できました。
 
+<br>
 <meridian-passage></meridian-passage>
+<br>

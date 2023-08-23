@@ -78,7 +78,7 @@ export default class MeridianPassage {
     this.scene = new THREE.Scene()
     this.camera = new THREE.PerspectiveCamera(
       90,
-      window.innerWidth < 480 ? 1 : window.innerWidth / window.innerHeight,
+      this.canvas.width / this.canvas.height,
       0.1,
       600000
     )
@@ -103,13 +103,6 @@ export default class MeridianPassage {
     this.scene.add(new THREE.AmbientLight('#f0f0f0', 0.15))
 
     this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas })
-    this.renderer.setSize(
-      window.innerWidth * (window.innerWidth < 480 ? 0.9 : 0.399),
-      window.innerWidth < 480
-        ? window.innerWidth * 0.9
-        : window.innerHeight * 0.399
-    )
-
     this.render()
   }
 

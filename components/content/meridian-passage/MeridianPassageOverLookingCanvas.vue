@@ -40,6 +40,5 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- TODO: サイズ -->
-  <canvas ref="canvas" class="w-full sm:w-[49%]" />
+  <canvas ref="canvas" width="600" height="300" class="w-full max-h-[38vh]" />
 </template>

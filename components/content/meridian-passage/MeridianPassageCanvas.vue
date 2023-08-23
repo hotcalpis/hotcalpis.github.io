@@ -52,10 +52,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- TODO: サイズ -->
   <canvas
     ref="canvas"
-    class="w-full sm:w-[49%]"
+    width="600"
+    height="300"
+    class="w-full max-h-[38vh]"
     @pointerdown="pointerDragOn"
     @pointerup="pointerDragOff"
     @pointerout="pointerDragOff"

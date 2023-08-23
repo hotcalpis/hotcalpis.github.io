@@ -16,7 +16,7 @@ const next = computed(() => surrounds.value?.[1])
 
 <template>
   <div v-if="prev || next" class="flex justify-between">
-    <div class="w-2/5">
+    <div class="w-[44%] sm:w-2/5">
       <NuxtLink
         v-if="prev"
         :to="prev._path"
@@ -38,12 +38,12 @@ const next = computed(() => surrounds.value?.[1])
           </svg>
           <span class="mx-1 text-xs text-gray-500">Prev</span>
         </div>
-        <div class="mt-1 line-clamp-2">
+        <span class="mt-1 line-clamp-2 text-sm sm:text-base">
           {{ prev.title }}
-        </div>
+        </span>
       </NuxtLink>
     </div>
-    <div class="w-2/5">
+    <div class="w-[44%] sm:w-2/5">
       <NuxtLink
         v-if="next"
         :to="next._path"
@@ -66,7 +66,9 @@ const next = computed(() => surrounds.value?.[1])
           </svg>
         </div>
         <div class="flex justify-end">
-          <span class="mt-1 line-clamp-2">{{ next.title }}</span>
+          <span class="mt-1 line-clamp-2 text-sm sm:text-base">{{
+            next.title
+          }}</span>
         </div>
       </NuxtLink>
     </div>
