@@ -14,6 +14,11 @@ export default defineNuxtConfig({
     }
   },
   content: {
+    markdown: {
+      remarkPlugins: [
+        'remark-breaks',
+      ]
+    },
     highlight: {
       preload: [
         'ruby',
