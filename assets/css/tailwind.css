@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 html {
-  font-size: max(15px, calc(80% + 4 * (100vw - 600px) / 600));
+  font-size: calc(14px + (16.2 - 14) * ((100vw - 390px) / (1440 - 390)));
 }

@@ -1,8 +1,8 @@
 <template>
-  <div class="pb-12 border-b-2 border-primary">
+  <div class="pb-20 border-b-2 border-primary">
     <ContentDoc v-slot="{ doc }">
       <ContentRenderer :value="doc">
-        <div class="my-12 pb-12 border-b-2 border-primary">
+        <div class="mt-14 mb-12 pb-3 border-b-2 border-primary">
           <p class="mt-2 text-sm text-gray-400">
             {{ doc.date }}
           </p>

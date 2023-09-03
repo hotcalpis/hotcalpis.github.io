@@ -22,9 +22,17 @@ export default {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            maxWidth: 'none',
             'h1, h2, h3, h4': {
               fontWeight: theme('fontWeight.bold'),
               'scroll-margin-top': '1rem',
+            },
+            'h1, h2, h3': {
+              paddingLeft: '6px',
+              borderLeft: '6px solid',
+            },
+            'h1, h2': {
+              borderBottom: '2px solid',
             },
             'h1 a, h2 a, h3 a, h4 a': {
               fontWeight: 'inherit',
