@@ -24,15 +24,26 @@ export default {
           css: {
             maxWidth: 'none',
             'h1, h2, h3, h4': {
-              fontWeight: theme('fontWeight.bold'),
               'scroll-margin-top': '1rem',
             },
-            'h1, h2, h3': {
-              paddingLeft: '6px',
-              borderLeft: '6px solid',
-            },
             'h1, h2': {
-              borderBottom: '2px solid',
+              padding: '0.8rem',
+              borderRadius: '2px',
+              color: theme('colors.white'),
+              backgroundColor: theme('colors.primary'),
+            },
+            'h3, h4': {
+              borderLeft: '4px solid',
+              borderColor: theme('colors.primary'),
+              fontWeight: theme('fontWeight.semibold'),
+            },
+            h3: {
+              padding: '0.8rem',
+              margin: '2rem 0 0.8rem',
+            },
+            h4: {
+              'padding-left': '0.8rem',
+              margin: '1.5rem 0 0.6rem',
             },
             'h1 a, h2 a, h3 a, h4 a': {
               fontWeight: 'inherit',
