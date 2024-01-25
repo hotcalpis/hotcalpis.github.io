@@ -20,6 +20,7 @@ export default defineNuxtConfig({
       ]
     },
     highlight: {
+      theme: 'nord',
       preload: [
         'ruby',
         'js',
