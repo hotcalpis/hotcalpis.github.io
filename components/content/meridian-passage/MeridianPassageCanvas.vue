@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { ref, Ref, toRefs, PropType, onMounted, onUnmounted } from 'vue'
+import {
+  ref,
+  type Ref,
+  toRefs,
+  type PropType,
+  onMounted,
+  onUnmounted,
+} from 'vue'
 import MeridianPassageThree from './meridianPassageThree'
 
 const canvas = ref(null)

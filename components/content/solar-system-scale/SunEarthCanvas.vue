@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, Ref, onMounted, onUnmounted } from 'vue'
+import { ref, type Ref, onMounted, onUnmounted } from 'vue'
 import { ANIMATION_FPS, SUN_EARTH_DISTANCE, LIGHT_SPEED } from '@/constants'
 
 const canvasWidth = 1140

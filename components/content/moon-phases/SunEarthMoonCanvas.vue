@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, Ref, onMounted, onUnmounted } from 'vue'
+import { ref, type Ref, onMounted, onUnmounted } from 'vue'
 
 const canvas = ref(null)
 const canvasWidth = ref(0)

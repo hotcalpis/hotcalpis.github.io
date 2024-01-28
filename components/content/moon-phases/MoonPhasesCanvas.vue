@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, Ref, onMounted, onUnmounted } from 'vue'
+import { ref, type Ref, onMounted, onUnmounted } from 'vue'
 
 const silver = 'rgb(192, 192, 192)'
 const dark = 'rgb(115, 115, 115)'

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, PropType } from 'vue'
+import { ref, type PropType } from 'vue'
 
 const isShowModal = ref(false)
 
