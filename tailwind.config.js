@@ -27,6 +27,7 @@ export default {
               'scroll-margin-top': '1rem',
             },
             'h1, h2': {
+              margin: '3rem 0 0.8rem',
               padding: '0.8rem',
               borderRadius: '2px',
               color: theme('colors.white'),
