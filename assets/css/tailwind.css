@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 html {
-  font-size: calc(15.4px + (16.2 - 15.4) * ((100vw - 390px) / (1440 - 390)));
+  font-size: calc(15.8px + (16.2 - 15.8) * ((100vw - 390px) / (1440 - 390)));
+  line-height: 1.8
+}
+
+.prose {
+  line-height: 1.8
 }

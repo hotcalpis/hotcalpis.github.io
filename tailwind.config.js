@@ -39,12 +39,12 @@ export default {
               fontWeight: theme('fontWeight.semibold'),
             },
             h3: {
+              margin: '2.4rem 0 0.8rem',
               padding: '0.8rem',
-              margin: '2rem 0 0.8rem',
             },
             h4: {
-              'padding-left': '0.8rem',
               margin: '1.5rem 0 0.6rem',
+              'padding-left': '0.8rem',
             },
             'h1 a, h2 a, h3 a, h4 a': {
               fontWeight: 'inherit',
